@@ -12,16 +12,10 @@ ReactDOM.render(
 
 
 
+
 // https://www.youtube.com/watch?v=hftvg3-E_dc
-
 // https://youtu.be/d1r0aK5awWk          vamos por el minuto 16:37
-
-// virtualenv -p python3 env
-
-
 // https://youtu.be/eZuUQ35fG5I      vamos por el minuto 6.41
-
-
 // https://docs.djangoproject.com/en/3.2/intro/tutorial01/
 // https://docs.djangoproject.com/en/3.2/faq/help/
 //https://docs.djangoproject.com/en/3.2/ref/django-admin/
