@@ -18,7 +18,7 @@ const Navigation = () => {
 
               <NavDropdown title="Modulos" id="collasible-nav-dropdown">
                 <NavDropdown.Item href="/facturacion">Facturación</NavDropdown.Item>
-                <NavDropdown.Item href="/panda">Panda</NavDropdown.Item>
+                <NavDropdown.Item href="/cotizacion">Cotización</NavDropdown.Item>
                 <NavDropdown.Item href="/gorila">Gorila</NavDropdown.Item>
                 <NavDropdown.Divider />
                 <NavDropdown.Item href="/rhino">Rhino</NavDropdown.Item>

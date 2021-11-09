@@ -7,7 +7,7 @@ import { LoginScreen } from '../pages/LoginScreen';
 import { Inicio } from '../pages/Inicio';
 import {Facturacion} from '../pages/Facturacion';
 import Gorila from '../pages/Gorila';
-import {Panda} from '../pages/Panda'
+import {Cotizacion} from '../pages/Cotizacion'
 import Rhino from '../pages/Rhino'
 import SeaTurtle from '../pages/SeaTurtle'
 
@@ -25,7 +25,7 @@ export const AppRouter = () => {
                     <Route path="/facturacion" component={Facturacion}/>
 
                       <Route path='/gorila' component={Gorila}/> 
-                      <Route path="/panda" component={Panda} />  
+                      <Route path="/cotizacion" component={Cotizacion} />  
                       <Route path="/rhino" component={Rhino} />  
                       <Route path="/seaturtle" component={SeaTurtle} />  
                 </Switch>

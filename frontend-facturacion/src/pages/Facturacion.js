@@ -1,4 +1,4 @@
-import React from "react";  // 
+import React from "react";  // , {useState, useEffect} 
 import Navigation from "../components/Navigation";
 import { Container, Form, Row, Col, Table , Button} from "react-bootstrap";
 import Datatable from 'react-data-table-component';
@@ -129,16 +129,16 @@ const columnas2 =[
   {name: 'Cantidad a llevar', selector: row => row.cantidad, sortable: true},
   {name: 'Costo acumulado', selector: row => row.costoAcumulado, sortable: true},
 ];
-export class Facturacion extends React.Component {
-  state = {
-    busqueda: ''
-  }
-  onChange = async e=>{
-     e.persist();
-     await this.setState({busqueda: e.target.value});
-     console.log(this.state.busqueda);
-  }
-  render(){
+export  function Facturacion() {
+  // state = {
+  //   busqueda: '', 
+  // }
+  // onChange = async e=>{
+  //    e.persist();
+  //    await this.setState({busqueda: e.target.value});
+  //    console.log(this.state.busqueda);
+  // }
+  
     return (
       <div>
         <Navigation />
@@ -161,27 +161,28 @@ export class Facturacion extends React.Component {
           <tbody>
           <tr>
              <td><Form.Label>Codigo del articulo: </Form.Label></td>
-             <td style={{border: '1px solid black'}}><Form.Label>XXXXX</Form.Label></td>
+             <td><Form.Control type="text" placeholder="" readOnly /></td>
+             
           </tr>
           <tr>
              <td><Form.Label>Descripcion:</Form.Label></td>
-             <td style={{border: '1px solid black'}}><Form.Label>XXXXX</Form.Label></td>
+             <td><Form.Control type="text" placeholder="" readOnly /></td>
           </tr>
           <tr>
              <td><Form.Label>Precio unitario de venta:</Form.Label></td>
-             <td style={{border: '1px solid black'}}><Form.Label>XXXXX</Form.Label></td>
+             <td><Form.Control type="text" placeholder="" readOnly /></td>
           </tr>
           <tr>
              <td><Form.Label>Dias de vida util:</Form.Label></td>
-             <td style={{border: '1px solid black'}}><Form.Label>XXXXX</Form.Label></td>
+             <td><Form.Control type="text" placeholder="" readOnly /></td>
           </tr>
           <tr>
              <td><Form.Label>Marca: </Form.Label></td>
-             <td style={{border: '1px solid black'}}><Form.Label>XXXXX</Form.Label></td>
+             <td><Form.Control type="text" placeholder="" readOnly /></td>
           </tr>
           <tr>
              <td><Form.Label>Cantidad en Bodega:</Form.Label></td>
-             <td style={{border: '1px solid black'}}><Form.Label>XXXXX</Form.Label></td>
+             <td><Form.Control type="text" placeholder="" readOnly /></td>
           </tr>
           <tr>
              <td><Form.Label>Cantidad de productos al carrito:</Form.Label></td>
@@ -217,8 +218,8 @@ export class Facturacion extends React.Component {
               placeholder="Buscar producto en almacen"
               className="textField "
               name="busqueda"
-               value={this.state.busqueda}
-               onChange={this.onChange}
+              //  value={this.state.busqueda}
+              //  onChange={this.onChange}
              />
 
 
@@ -291,9 +292,27 @@ export class Facturacion extends React.Component {
                        <td> SUB-TOTAL: </td>
                        <td style={{border: '1px solid red'}}> <Form.Label>XXXXX</Form.Label></td>
                      </tr>
+                       <tr>
+                       <Form.Group className="mb-3" controlId="formBasicCheckbox">
+                            <Form.Check type="checkbox" label="15 % ISV" />
+                        </Form.Group>
+                       </tr>
+                       <tr>
+                          <td> Descuento: </td>
+                           <td> <Form.Select>
+                                <option>15 %</option>
+                                <option>30 %</option>
+                              </Form.Select>
+                            </td>
+                       </tr>
+                       <tr>
+                         <td>Total: </td>
+                     
+                         <td style={{border: '1px solid black'}}><Form.Label>XXXXX</Form.Label></td>
+                         <td><Button variant="success">Facturar</Button></td>
+                       </tr>
                     
-                    
-                 </tbody>
+                   </tbody>
               </table>
 
             </Col>
@@ -301,9 +320,9 @@ export class Facturacion extends React.Component {
         </Container>
       </div>
     );
-  }
   
-};
+  
+}
 
 /*
 
